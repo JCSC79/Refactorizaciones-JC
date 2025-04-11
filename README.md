@@ -18,10 +18,9 @@ El objetivo del proyecto es:
 
 ### **1. Clonar el Repositorio**
 
-Primero, clona este repositorio a tu máquina local:
+Primero, clona este repositorio a tu máquina local
 
-```bash
-git clone https://github.com/JCSC79/Refactorizaciones-JC.git
+
 
 ## CA4.1 - Identificación y aplicación de patrones de refactorización
 
