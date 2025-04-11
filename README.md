@@ -23,3 +23,13 @@ Primero, clona este repositorio a tu máquina local:
 ```bash
 git clone https://github.com/JCSC79/Refactorizaciones-JC.git
 
+## CA4.1 - Identificación y aplicación de patrones de refactorización
+
+Se trabajó con el archivo `calculo_descuento_original.py` y se refactorizó creando una versión más clara y modular: `calculo_descuento_refactorizado.py`.
+
+### Patrones aplicados:
+- **Extracción de método**: se movió el cálculo del precio con descuento a una función llamada `calcular_precio_final()`.
+- **Renombrado de variables**: se usaron nombres más expresivos para mejorar la legibilidad.
+- **Control de errores más claro** y validación de entrada de usuario.
+
+Este cambio se puede ver en el commit: `CA4.1 - Refactorización: extracción de método y renombrado de variables`
