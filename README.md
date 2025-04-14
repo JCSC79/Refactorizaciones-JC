@@ -1,34 +1,54 @@
 # Proyecto de Refactorización: Cálculo de Descuento
 
-Este repositorio muestra el proceso de refactorización de un sistema para calcular descuentos en función del tipo de cliente (regular, VIP, nuevo). El código inicial contiene redundancia y condiciones complejas, mientras que la versión refactorizada mejora la legibilidad, modularidad y reutilización.
+Este repositorio muestra el proceso de refactorización de un sistema para calcular descuentos en función del tipo de cliente (regular, VIP, nuevo). El código inicial contiene redundancias y condiciones complejas, mientras que la versión refactorizada mejora la legibilidad, modularidad y reutilización del código.
 
-## **Objetivo**
+## Objetivo
 
 El objetivo del proyecto es:
-1. Demostrar cómo identificar y aplicar patrones de refactorización comunes, como la eliminación de código duplicado y la simplificación de condiciones complejas.
+1. Demostrar cómo identificar y aplicar patrones de refactorización comunes, como la eliminación de código duplicado y la simplificación de condiciones complejas (CA4.1).
 2. Comparar las versiones **antes** y **después** de la refactorización, mostrando cómo el código se vuelve más limpio y fácil de mantener.
+3. Validar que la refactorización no introduce errores mediante la creación y ejecución de pruebas unitarias (CA4.2).
 
-## **Estructura del Proyecto**
+## Estructura del Proyecto
 
-- **`calculo_descuento_original.py`**: Contiene el código original con condiciones complejas y duplicación de código.
-- **`calculo_descuento_refactorizado.py`**: Contiene el código después de la refactorización, donde se aplican patrones de refactorización como la eliminación de duplicación y la simplificación de condiciones.
-- **`test_calculo_descuento.py`** (Opcional): Contiene pruebas unitarias para verificar que ambas versiones del código calculen correctamente los descuentos.
+- **`calculo_descuento_original.py`**: Contiene el código original con condiciones complejas y duplicación de lógica.
+- **`calculo_descuento_refactorizado.py`**: Contiene el código refactorizado, donde se aplican patrones como la extracción de método y el renombrado para mejorar la modularidad y legibilidad.
+- **`test_calculo_descuento.py`**: Contiene pruebas unitarias (usando `unittest`) para verificar que el comportamiento del cálculo de descuento se mantiene tras la refactorización.
 
-## **Cómo Usar**
+# Proyecto 2 de Refactorización: Cálculo de Factura Final
 
-### **1. Clonar el Repositorio**
+Este proyecto ilustra un ejemplo más robusto de refactorización en Python, en el que se genera una factura final a partir de datos ingresados por el usuario. El sistema permite:
+- Ingresar múltiples productos (nombre, cantidad y precio unitario).
+- Aplicar un descuento (si se dispone de un código).
+- Calcular y agregar impuestos.
+- Incluir un costo de envío.
 
-Primero, clona este repositorio a tu máquina local
+Se presenta la solución en dos versiones:
+- **Código Original:** Un único script monolítico (archivo `factura.py`).
+- **Código Refactorizado:** El proceso se divide en funciones auxiliares para mejorar la modularidad, legibilidad y mantenimiento (archivo `factura_refactorizado.py`).
+
+Además, se incluye un conjunto de pruebas unitarias (archivo `test_factura.py`) que validan el cálculo del total final a partir de una función de cálculo sin interactividad, asegurando que la refactorización no introduzca cambios inesperados en el comportamiento.
+
+## Objetivo
+
+- Demostrar la aplicación de varios patrones de refactorización (extracción de métodos, renombrado de variables, eliminación de duplicación, simplificación de condiciones).
+- Validar la refactorización mediante pruebas unitarias, comprobando que el sistema se comporta de la misma forma antes y después de la refactorización.
+
+## Estructura del Proyecto
+
+- **`factura_original.py`**: Código original, con toda la lógica en una única función.
+- **`factura_refactorizado.py`**: Código refactorizado que utiliza funciones auxiliares para separar responsabilidades.
+  - Incluye además la función `calcular_total_factura()` para facilitar las pruebas unitarias.
+- **`test_factura.py`**: Archivo de pruebas unitarias (usando `unittest`) para verificar el cálculo del total final de la factura a partir de parámetros de entrada.
+  
 
 
+## Cómo Usar
 
-## CA4.1 - Identificación y aplicación de patrones de refactorización
+### 1. Clonar el Repositorio
 
-Se trabajó con el archivo `calculo_descuento_original.py` y se refactorizó creando una versión más clara y modular: `calculo_descuento_refactorizado.py`.
+Clona este repositorio en tu máquina local:
 
-### Patrones aplicados:
-- **Extracción de método**: se movió el cálculo del precio con descuento a una función llamada `calcular_precio_final()`.
-- **Renombrado de variables**: se usaron nombres más expresivos para mejorar la legibilidad.
-- **Control de errores más claro** y validación de entrada de usuario.
-
-Este cambio se puede ver en el commit: `CA4.1 - Refactorización: extracción de método y renombrado de variables`
+```bash
+git clone https://github.com/JCSC79/Refactorizaciones-JC.git
+cd Refactorizaciones-JC
